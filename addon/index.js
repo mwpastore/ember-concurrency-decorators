@@ -51,10 +51,12 @@ function extractValue(desc) {
  * @private
  */
 function createTaskFromDescriptor(desc) {
+  /*
   assert(
     'ember-concurrency-decorators: Getters and setters are not supported for tasks.',
     desc.writable
   );
+  */
 
   const value = extractValue(desc);
   assert(
@@ -75,10 +77,12 @@ function createTaskFromDescriptor(desc) {
  * @private
  */
 function createTaskGroupFromDescriptor(desc) {
+  /*
   assert(
     'ember-concurrency-decorators: Getters and setters are not supported for task groups.',
     desc.writable
   );
+  */
   assert(
     'ember-concurrency-decorators: Task groups can not accept values.',
     !extractValue(desc)
